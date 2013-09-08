@@ -172,7 +172,7 @@ The following program demonstrates three features widely used in C Programs. We'
 #include <stdio.h>
 #include <assert.h>
 
-.#ifdef CHECK_ENABLED
+#ifdef CHECK_ENABLED
 #define CHECK(X, Y) \
 do { printf("Performing Assertion\n"); assert((X - Y) != 0); printf("Assertion passed\n"); } while (0)
 #else
@@ -369,7 +369,7 @@ So what's the change now? When some .c file which includes this header is being 
 **Feature/Trick 5** : This is the last preprocessor feature I'll be discussing! The C preprocessor gives two directives ```#warning``` and ```#error```. I expect you might have guessed their uses. Consider the following code snippet - 
 
 ```c
-.#ifdef USE_OLD_FOO
+#ifdef USE_OLD_FOO
 #warning "Using old foo(). This is deprecated! You are getting this message because USE_OLD_FOO is defined"
 void foo()
 {
